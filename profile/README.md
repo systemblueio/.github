@@ -1,6 +1,6 @@
 
 
-**Native apps built with 💙**
+## Native apps built with 💙
 
 systemBlue is a small, ambitious software company crafting meaningful experiences for iOS, macOS, and watchOS. systemBlue apps leverage Swift and SwiftUI for consistent experiences across devices.
 
