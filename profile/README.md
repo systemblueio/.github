@@ -1,22 +1,8 @@
 
 
-## Native apps built with 💙
+### Native apps built with 💙
 
 systemBlue is a small, ambitious software company crafting meaningful experiences for iOS, macOS, and watchOS. systemBlue apps leverage Swift and SwiftUI for consistent experiences across devices.
-
----
-
-### Recent Work
-
-**Sparkle** — A community-powered iOS app for reporting and cleaning up litter in Charlottesville. Recent updates include Swift 6 refactoring across ViewModels and Managers, enhanced photo upload capabilities, and improved security tooling. Built with SwiftUI, SwiftData, and Supabase backend, with a focus on community impact.
-
----
-
-### A Different Way
-
-The goal is to make good things, support the open source community where possible, and put people over profits. systemBlue collects minimal user data and gives users control over their information. 
-
-systemBlue also provides resources to shelters and vulnerable communities in Charlottesville as they become available. For collaboration opportunities, contact hello@systemblue.io.
 
 ---
 
@@ -61,17 +47,8 @@ systemBlue also provides resources to shelters and vulnerable communities in Cha
 
 ---
 
-### Get In Touch
-
-For questions or feedback:
+**For questions or feedback:**
 
 **Email:** [hello@systemblue.io](mailto:hello@systemblue.io)  
 **Web:** [systemblue.io](https://systemblue.io)
-
----
-
-### Facts: Fun or Otherwise
-
-- Dark mode is the only mode
-- systemBlue's unofficial mascot is a pixel cat
 
