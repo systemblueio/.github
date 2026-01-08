@@ -1,16 +1,22 @@
 
 
-**Native apps built with 💙 in Charlottesville, Virginia**
+**Native apps built in Charlottesville, Virginia**
 
-systemBlue is a small, and ambitious, software company crafting meaningful experiences for iOS, macOS, and watchOS. systemBlue apps proudly leverage the performance of Swift and SwiftUI for a familiar experience across devices.
+systemBlue is a small, ambitious software company crafting meaningful experiences for iOS, macOS, and watchOS. systemBlue apps leverage Swift and SwiftUI for consistent experiences across devices.
+
+---
+
+### Recent Work
+
+**Sparkle** — A community-powered iOS app for reporting and cleaning up litter in Charlottesville. Recent updates include Swift 6 refactoring across ViewModels and Managers, enhanced photo upload capabilities, and improved security tooling. Built with SwiftUI, SwiftData, and Supabase backend, with a focus on community impact.
 
 ---
 
 ### A Different Way
 
-The goal is to make good things, support the open source community wherever possible, and put people over profits. systemBlue strives to collect as little user data as possible and always gives the user the final say over their data. Delete buttons are just that. 
+The goal is to make good things, support the open source community where possible, and put people over profits. systemBlue collects minimal user data and gives users control over their information. 
 
-systemBlue is also committed to providing critical resources to shelters and vulnerable communities in Charlottesville. Resources are donated as they become available to the company. If you'd like to collaborate in serving the community, please send an email to: hello@systemblue.io.
+systemBlue also provides resources to shelters and vulnerable communities in Charlottesville as they become available. For collaboration opportunities, contact hello@systemblue.io.
 
 ---
 
@@ -18,29 +24,49 @@ systemBlue is also committed to providing critical resources to shelters and vul
 
 **Mobile**
 
-![Swift](https://img.shields.io/badge/Swift-F05138?style=flat-square&logo=swift&logoColor=white)
-![SwiftUI](https://img.shields.io/badge/SwiftUI-007AFF?style=flat-square&logo=swift&logoColor=white)
-![SwiftData](https://img.shields.io/badge/SwiftData-007AFF?style=flat-square&logo=apple&logoColor=white)
-![Xcode](https://img.shields.io/badge/Xcode-147EFB?style=flat-square&logo=xcode&logoColor=white)
+![Swift](https://img.shields.io/badge/Swift-F05138?style=for-the-badge&logo=swift&logoColor=white)
+![SwiftUI](https://img.shields.io/badge/SwiftUI-007AFF?style=for-the-badge&logo=swift&logoColor=white)
+![SwiftData](https://img.shields.io/badge/SwiftData-007AFF?style=for-the-badge&logo=apple&logoColor=white)
+![SwiftTesting](https://img.shields.io/badge/SwiftTesting-007AFF?style=for-the-badge&logo=swift&logoColor=white)
 
 **Web**
 
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
-![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
-**Infrastructure**
+**Backend & Infrastructure**
 
-![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=flat-square&logo=supabase&logoColor=white)
-![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=flat-square&logo=netlify&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
+![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white)
+![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)
+
+**Tools**
+
+![Xcode](https://img.shields.io/badge/Xcode-147EFB?style=for-the-badge&logo=xcode&logoColor=white)
+![RocketSim](https://img.shields.io/badge/RocketSim-000000?style=for-the-badge&logo=rocketsim&logoColor=white)
+![Fastlane](https://img.shields.io/badge/Fastlane-00F200?style=for-the-badge&logo=fastlane&logoColor=white)
+![Cursor](https://img.shields.io/badge/Cursor-000000?style=for-the-badge&logo=cursor&logoColor=white)
+![Cursor's Bug Bot](https://img.shields.io/badge/Cursor's_Bug_Bot-000000?style=for-the-badge&logo=cursor&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
+
+**Security Tooling**
+
+![Gitleaks](https://img.shields.io/badge/Gitleaks-FF6B6B?style=for-the-badge&logo=git&logoColor=white)
+![TruffleHog](https://img.shields.io/badge/TruffleHog-FF6B6B?style=for-the-badge&logo=git&logoColor=white)
+![MobSF](https://img.shields.io/badge/MobSF-FF6B6B?style=for-the-badge&logo=android&logoColor=white)
 
 ---
 
 ### Get In Touch
 
-Whether you have questions, feedback, or just want to say hello:
+For questions or feedback:
 
 **Email:** [hello@systemblue.io](mailto:hello@systemblue.io)  
 **Web:** [systemblue.io](https://systemblue.io)
@@ -51,9 +77,4 @@ Whether you have questions, feedback, or just want to say hello:
 
 - Dark mode is the only mode
 - systemBlue's unofficial mascot is a pixel cat
-- It's just as important that you treat yourself the way you want to be treated. You deserve to exist.
-- Methodical Coffee is the best roaster on the planet
 
----
-
-<sub>Thanks for stopping by! The repos are currently keeping a low profile, but exciting things are in the works. - Shelton</sub>
