@@ -24,40 +24,40 @@ systemBlue also provides resources to shelters and vulnerable communities in Cha
 
 **Mobile**
 
-![Swift](https://img.shields.io/badge/Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white)
-![SwiftUI](https://img.shields.io/badge/SwiftUI-00AFD7?style=for-the-badge&logo=swift&logoColor=white)
-![SwiftData](https://img.shields.io/badge/SwiftData-007AFF?style=for-the-badge&logo=apple&logoColor=white)
+![Swift](https://img.shields.io/badge/Swift-FF6A00?style=for-the-badge&logo=swift&logoColor=white)
+![SwiftUI](https://img.shields.io/badge/SwiftUI-5AC8FA?style=for-the-badge&logo=swift&logoColor=white)
+![SwiftData](https://img.shields.io/badge/SwiftData-0A84FF?style=for-the-badge&logo=swift&logoColor=white)
 ![SwiftTesting](https://img.shields.io/badge/SwiftTesting-007AFF?style=for-the-badge&logo=swift&logoColor=white)
 
 **Web**
 
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=323330)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![React](https://img.shields.io/badge/React-FF2D55?style=for-the-badge&logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5AC8FA?style=for-the-badge&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-FF6A00?style=for-the-badge&logo=javascript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-34C759?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-AF52DE?style=for-the-badge&logo=framer&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-FF2D55?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-0A84FF?style=for-the-badge&logo=css3&logoColor=white)
 
 **Backend & Infrastructure**
 
-![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
-![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)
+![Supabase](https://img.shields.io/badge/Supabase-34C759?style=for-the-badge&logo=supabase&logoColor=white)
+![Netlify](https://img.shields.io/badge/Netlify-5AC8FA?style=for-the-badge&logo=netlify&logoColor=white)
 
 **Tools**
 
-![Xcode](https://img.shields.io/badge/Xcode-147EFB?style=for-the-badge&logo=xcode&logoColor=white)
-![Fastlane](https://img.shields.io/badge/Fastlane-00F200?style=for-the-badge&logo=fastlane&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
+![Xcode](https://img.shields.io/badge/Xcode-007AFF?style=for-the-badge&logo=xcode&logoColor=white)
+![Fastlane](https://img.shields.io/badge/Fastlane-34C759?style=for-the-badge&logo=fastlane&logoColor=white)
+![Git](https://img.shields.io/badge/Git-FF2D55?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=github&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-0A84FF?style=for-the-badge&logo=github-actions&logoColor=white)
 
 **Security Tooling**
 
-![Gitleaks](https://img.shields.io/badge/Gitleaks-2E7D32?style=for-the-badge&logo=git&logoColor=white)
-![TruffleHog](https://img.shields.io/badge/TruffleHog-FF6B6B?style=for-the-badge&logo=git&logoColor=white)
-![MobSF](https://img.shields.io/badge/MobSF-FF6B6B?style=for-the-badge&logo=android&logoColor=white)
+![Gitleaks](https://img.shields.io/badge/Gitleaks-AF52DE?style=for-the-badge&logo=git&logoColor=white)
+![TruffleHog](https://img.shields.io/badge/TruffleHog-FF6A00?style=for-the-badge&logo=git&logoColor=white)
+![MobSF](https://img.shields.io/badge/MobSF-FF2D55?style=for-the-badge&logo=android&logoColor=white)
 
 ---
 
