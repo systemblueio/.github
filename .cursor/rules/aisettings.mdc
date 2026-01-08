@@ -1,0 +1,329 @@
+---
+description: "AI settings and preferences for systemBlue iOS app development"
+alwaysApply: true
+---
+
+# systemBlue iOS App Development - AI Settings
+
+## Project Context
+
+**systemBlue** is a small, ambitious software company crafting meaningful experiences for iOS, macOS, and watchOS. systemBlue apps leverage Swift and SwiftUI for consistent experiences across devices.
+
+### Recent Work
+
+**Sparkle** — A community-powered iOS app for reporting and cleaning up litter in Charlottesville. Recent updates include Swift 6 refactoring across ViewModels and Managers, enhanced photo upload capabilities, and improved security tooling. Built with SwiftUI, SwiftData, and Supabase backend, with a focus on community impact.
+
+## Tech Stack
+
+**Mobile**
+- Swift 6
+- SwiftUI
+- SwiftData
+- SwiftTesting
+
+**Backend & Infrastructure**
+- Supabase (PostgreSQL, Auth, Realtime, Storage)
+
+**Tools**
+- Xcode
+- Fastlane
+- Git & GitHub
+- GitHub Actions
+
+**Security Tooling**
+- Gitleaks
+- TruffleHog
+- MobSF
+
+## Core Principles
+
+### Apple-First Approach
+- Follow Apple Developer Documentation and Human Interface Guidelines as primary references
+- Prefer native SwiftUI components over custom implementations
+- Use latest recommended technologies (Swift 6, SwiftData, SwiftTesting)
+- Apply HIG principles: Clarity, Deference, Depth
+
+### SwiftUI Native Components First
+- Use native SwiftUI components (List, Form, NavigationStack, TabView, etc.)
+- Build custom components on top of native components
+- Avoid custom implementations when native components suffice
+- Use native modifiers (`.fontDesign(.rounded)`, `.sensoryFeedback()`, etc.)
+
+### Modern Swift 6 Patterns
+- Use `@MainActor @Observable` for ViewModels (NOT `ObservableObject`)
+- Use `@Observable` macro (NOT `@Published`)
+- Structured concurrency: `async/await`, `Task`, proper cancellation
+- Actor isolation for thread-safe shared state
+- Value types (structs) by default, classes only when needed
+
+## Architecture Patterns
+
+### MVVM + Services Structure
+```
+View → ViewModel → Service → Manager → API
+```
+
+**ViewModels**:
+- `@MainActor @Observable final class FeatureViewModel`
+- Private dependencies injected as singletons
+- State organized with MARK comments
+- Task management with cancellation in `onDisappear`
+- Use `private(set)` for read-only public state
+
+**Services**:
+- Business logic layer (AuthService, ProfileService, ReportsService)
+- Protocol-oriented for dependency injection
+- Shared singleton instances
+
+**Managers**:
+- Infrastructure singletons (SupabaseManager, LocationManager, HapticManager, etc.)
+- Appropriate actor isolation (`@MainActor` for UI-related, `actor` for thread-safe operations)
+- Key utilities: `Log` (structured logging), `InputSanitizer` (input validation), `ImageCache` (image caching)
+
+### Code Organization
+
+**MARK Comments Structure**:
+```swift
+// MARK: - Dependencies
+// MARK: - State
+// MARK: - Task Management
+// MARK: - Computed Properties
+// MARK: - Initialization
+// MARK: - Public Methods
+// MARK: - Private Helpers
+```
+
+**File Naming**:
+- Views: `FeatureNameView.swift`
+- ViewModels: `FeatureNameViewModel.swift`
+- Services: `FeatureService.swift`
+- Managers: `FeatureManager.swift`
+
+## Code Standards
+
+### Swift 6 Concurrency
+- All ViewModels: `@MainActor @Observable`
+- Background operations: Use `Task` with proper cancellation
+- Cancel tasks in `onDisappear` or `cancelTasks()` method
+- Use `Task { }` for fire-and-forget async work
+- Use `Task.detached` only when explicitly needed off main thread
+- **Avoid concurrent mutation of captured variables** - Use `nonisolated(unsafe) static` for cross-concurrency references
+- **Always use explicit `self.`** in closures when accessing instance properties
+- **Use `let` for immutable values** - Only use `var` when mutation is needed
+- **Replace unused bindings** with `_` or `!= nil` checks
+
+### State Management
+- Use `private(set)` for read-only public properties
+- Use computed properties for derived state
+- Avoid `@Published` (use `@Observable` macro instead)
+- Use `dataVersion` counter pattern for triggering `@Observable` updates when needed
+
+### Error Handling
+- Use `do-catch` blocks for async operations
+- Set error state: `private(set) var errorMessage: String?`
+- Show errors with alerts or inline messages
+- Use `HapticManager.shared.error()` for error feedback
+- Log errors with `Log.category.error("message")` (use appropriate category: auth, profile, reports, location, network, etc.)
+
+### Input Validation
+- **Always use `InputSanitizer`** for user input
+- Validate descriptions: `InputSanitizer.validateDescription()`
+- Validate usernames: `InputSanitizer.validateUsername()`
+- Check for URLs: `InputSanitizer.containsURLs()`
+- Sanitize before storing: `InputSanitizer.sanitizeDescription()`
+
+### Security Requirements
+- **Never hardcode secrets or API keys** - Use `Secrets.plist`
+- **Always validate user input** - Use `InputSanitizer`
+- **Check authentication** - Verify `authService.isAuthenticated`
+- **Row Level Security** - Database policies enforce access control
+- **No force unwrapping** - Use `guard let` / `if let`
+- Run `./scripts/verify-security.sh` before committing
+
+### UI Design System
+- Use `DesignConstants` for spacing, corner radius, icon sizes
+- Use consistent button styles: `.sparklePrimaryButton()`, `.sparkleSecondaryButton()`
+- Use `.sparkleSectionHeader()` for section headers
+- 24pt horizontal padding standard
+- SF Rounded font design for headlines
+
+## Common Patterns
+
+### ViewModel Pattern
+```swift
+@MainActor @Observable
+final class FeatureViewModel {
+    // MARK: - Dependencies
+    private let service = FeatureService.shared
+    
+    // MARK: - State
+    private(set) var isLoading = false
+    private(set) var errorMessage: String?
+    
+    // MARK: - Task Management
+    private var loadTask: Task<Void, Never>?
+    
+    func load() async {
+        loadTask?.cancel()
+        loadTask = Task {
+            isLoading = true
+            defer { isLoading = false }
+            // ... async work
+        }
+    }
+}
+```
+
+### Task Cancellation
+```swift
+func cancelTasks() {
+    loadTask?.cancel()
+    loadTask = nil
+}
+
+// In view:
+.onDisappear {
+    viewModel.cancelTasks()
+}
+```
+
+### Input Validation Pattern
+```swift
+var sanitizedNotes: String {
+    InputSanitizer.sanitizeDescription(notes)
+}
+
+var isNotesValid: Bool {
+    InputSanitizer.validateDescription(notes).isValid
+}
+
+var notesValidationError: String? {
+    InputSanitizer.validateDescription(notes).errorMessage
+}
+```
+
+## Anti-Patterns to Avoid
+
+❌ **Don't use**:
+- `ObservableObject` (use `@Observable` macro)
+- `@Published` (not needed with `@Observable`)
+- `[String: Any]` dictionaries for API updates (use Codable structs)
+- Force unwrapping (`!`) - use `guard let` / `if let`
+- `print()` statements - use `Log.category.debug/info/warning/error()` utility
+- Custom components when native SwiftUI components suffice
+- Completion handlers - use `async/await`
+- Deprecated APIs - check warnings, use latest SDK methods
+
+✅ **Do use**:
+- `@MainActor @Observable` for ViewModels
+- `private(set)` for read-only state
+- `InputSanitizer` for all user input
+- Native SwiftUI components
+- Structured concurrency (`async/await`)
+- `#Preview` blocks for SwiftUI views
+- MARK comments for organization
+- Small, focused functions (single responsibility)
+
+## AI-Assisted Development
+
+### V.E.R.I.F.Y Protocol
+Apply to ALL AI-generated code:
+- **V** - Verbalize understanding (explain in own words)
+- **E** - Examine dependencies (review imports, check security)
+- **R** - Review security (input validation, authentication, OWASP Top 10)
+- **I** - Inspect code quality (follows standards, readable, testable)
+- **F** - Functionality testing (unit tests, edge cases)
+- **Y** - Yield to manual review (code review required)
+
+### D.O.C.S. Methodology
+Document AI-assisted development:
+- **D** - Design Decisions (why this approach)
+- **O** - Objectives & Outcomes (what it accomplishes)
+- **C** - Constraints & Context (limitations, requirements)
+- **S** - Sources & References (AI assistance, documentation)
+
+### Security Checklist
+Before merging AI-generated code:
+- [ ] Input validation present (use `InputSanitizer`)
+- [ ] No hardcoded secrets
+- [ ] Authentication checks verified
+- [ ] Error handling doesn't leak sensitive info
+- [ ] Dependencies examined and secure
+- [ ] Security scan passed (`./scripts/verify-security.sh`)
+
+## Testing Standards
+
+- Use SwiftTesting framework (`@Test`, `#expect`, `#require`)
+- Testable architecture (protocols, dependency injection)
+- Test error cases and edge cases
+- Complex logic extracted to testable functions
+- Include `#Preview` blocks for SwiftUI views
+
+## Key Utilities Reference
+
+### Logging
+- Use `Log.category.debug/info/warning/error()` instead of `print()`
+- Available categories: `auth`, `profile`, `reports`, `location`, `haptics`, `network`, `storage`, `notifications`, `backend`, `store`
+- Example: `Log.reports.info("Report created successfully")`
+
+### Input Validation
+- Always use `InputSanitizer` for user input
+- `InputSanitizer.validateDescription()` - Returns `ValidationResult` with `isValid` and `errorMessage`
+- `InputSanitizer.sanitizeDescription()` - Returns sanitized string
+- `InputSanitizer.validateUsername()` - Username validation
+- `InputSanitizer.containsURLs()` - Check for URLs in text
+
+### Image Caching
+- Use `ImageCache.shared` for async image loading
+- Thread-safe actor-based cache with request deduplication
+- Automatically handles memory warnings
+
+### Other Key Managers
+- `HapticManager.shared` - Tactile feedback (success, error, warning, selection)
+- `LocationManager.shared` - GPS permissions and current location
+- `NetworkMonitor.shared` - Network connectivity monitoring
+- `ReportsRepository.shared` - In-memory caching with file persistence
+
+## Documentation References
+
+- **Apple HIG**: https://developer.apple.com/design/human-interface-guidelines/
+- **SwiftUI Docs**: https://developer.apple.com/documentation/swiftui/
+- **Swift 6 Docs**: https://www.swift.org/documentation/
+- **Project Organization**: See `docs/systemBlue_workflows/PROJECT_ORGANIZATION.md`
+
+## Project Organization
+
+systemBlue follows a separate repository strategy:
+- Each mobile application has its own repository (e.g., `sparkle-ios`)
+- Each web application has its own repository (e.g., `[name]-web`)
+- Shared code via Swift packages or npm packages
+- Consistent naming conventions with `-ios`, `-web`, `-api` suffixes
+
+## Quick Reference
+
+**When writing code, always**:
+1. Use `@MainActor @Observable` for ViewModels
+2. Use `InputSanitizer` for user input
+3. Cancel tasks in `onDisappear`
+4. Use native SwiftUI components
+5. Follow MARK comment structure
+6. Use `private(set)` for read-only state
+7. Validate all user input
+8. Handle errors gracefully
+9. Include `#Preview` blocks
+10. Run security scan before committing
+
+**When reviewing code, check**:
+- Follows MVVM + Services architecture
+- Uses Swift 6 concurrency patterns
+- No concurrent mutation of captured variables
+- Explicit `self.` used in closures
+- `let` used for immutable values
+- No unused variable bindings
+- Input validation present
+- No hardcoded secrets
+- Native SwiftUI components
+- Proper error handling
+- Task cancellation
+- MARK comments present
+- Testable structure
