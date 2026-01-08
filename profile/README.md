@@ -31,7 +31,7 @@ systemBlue also provides resources to shelters and vulnerable communities in Cha
 
 **Web**
 
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-AF52DE?style=for-the-badge&logo=nextdotjs&logoColor=white)
 ![React](https://img.shields.io/badge/React-FF2D55?style=for-the-badge&logo=react&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5AC8FA?style=for-the-badge&logo=typescript&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-FF6A00?style=for-the-badge&logo=javascript&logoColor=white)
@@ -50,7 +50,7 @@ systemBlue also provides resources to shelters and vulnerable communities in Cha
 ![Xcode](https://img.shields.io/badge/Xcode-007AFF?style=for-the-badge&logo=xcode&logoColor=white)
 ![Fastlane](https://img.shields.io/badge/Fastlane-34C759?style=for-the-badge&logo=fastlane&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-FF2D55?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=github&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-5AC8FA?style=for-the-badge&logo=github&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-0A84FF?style=for-the-badge&logo=github-actions&logoColor=white)
 
 **Security Tooling**
