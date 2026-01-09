@@ -1,4 +1,6 @@
-
+<p align="center">
+  <img src="systemBlue@2x.png" alt="systemBlue" width="400">
+</p>
 
 ### Native apps built with 💙
 
