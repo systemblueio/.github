@@ -45,6 +45,10 @@ systemBlue is a small, ambitious software company crafting meaningful experience
 ![TruffleHog](https://img.shields.io/badge/TruffleHog-FF6A00?style=for-the-badge&logo=git&logoColor=white)
 ![MobSF](https://img.shields.io/badge/MobSF-FF2D55?style=for-the-badge&logo=android&logoColor=white)
 
+**Development Tools**
+
+![Cursor](https://img.shields.io/badge/Cursor-000000?style=flat-square&logo=cursor&logoColor=white)
+
 ---
 
 **For questions or feedback:**
