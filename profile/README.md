@@ -24,7 +24,7 @@ systemBlue is a small, ambitious software company crafting meaningful experience
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-34C759?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![Framer Motion](https://img.shields.io/badge/Framer_Motion-AF52DE?style=for-the-badge&logo=framer&logoColor=white)
 ![HTML5](https://img.shields.io/badge/HTML5-FF2D55?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-0A84FF?style=for-the-badge&logo=css3&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS-0A84FF?style=for-the-badge&logo=css&logoColor=white)
 
 **Backend & Infrastructure**
 
