@@ -34,6 +34,7 @@ systemBlue is a small, ambitious software company crafting meaningful experience
 **Tools**
 
 ![Xcode](https://img.shields.io/badge/Xcode-007AFF?style=for-the-badge&logo=xcode&logoColor=white)
+![Cursor](https://img.shields.io/badge/Cursor-AF52DE?style=for-the-badge&logo=cursor&logoColor=white)
 ![Fastlane](https://img.shields.io/badge/Fastlane-34C759?style=for-the-badge&logo=fastlane&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-FF2D55?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-5AC8FA?style=for-the-badge&logo=github&logoColor=white)
@@ -44,10 +45,6 @@ systemBlue is a small, ambitious software company crafting meaningful experience
 ![Gitleaks](https://img.shields.io/badge/Gitleaks-AF52DE?style=for-the-badge&logo=git&logoColor=white)
 ![TruffleHog](https://img.shields.io/badge/TruffleHog-FF6A00?style=for-the-badge&logo=git&logoColor=white)
 ![MobSF](https://img.shields.io/badge/MobSF-FF2D55?style=for-the-badge&logo=android&logoColor=white)
-
-**Development Tools**
-
-![Cursor](https://img.shields.io/badge/Cursor-000000?style=flat-square&logo=cursor&logoColor=white)
 
 ---
 
